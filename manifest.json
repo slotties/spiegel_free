@@ -1,0 +1,18 @@
+{
+	"name": "spiegel_free",
+	"version": "1.0",
+	"description": "spiegel LaterPay sucks",
+	"manifest_version": 2,
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"permissions": [
+		"https://www.spiegel.de/",
+		"http://www.spiegel.de/",
+		"tabs"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://www.spiegel.de/*", "https://www.spiegel.de/*"],
+			"js": ["spiegel_free.js"]
+		}
+	]
+}
